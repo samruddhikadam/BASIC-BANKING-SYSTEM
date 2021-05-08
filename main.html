@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+        <link rel="stylesheet" href="styles1.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+        
+
+        <title>BANKING WORLD</title>
+    </head>
+    <body onload="loader()">
+
+      <div id="loading"></div>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">BANKING WORLD</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="main.html">HOME</a></li>
+                <li><a href="customers.html">ALL CUSTOMERS</a></li>
+               
+              </ul>
+            </div>
+          </nav>
+        <div class="quote">
+           <h1>BANKING WORLD</h1>
+           “He tried to read an elementary economics text; it bored him past endurance,<br>
+            it was like listening to somebody interminably recounting a long and stupid dream.<br>
+            He could not force himself to understand how banks functioned and so forth,<br>
+            because all the operations of capitalism were as meaningless to him as the rites of a primitive religion,<br> 
+            as barbaric, as elaborate, and as unnecessary. In a human sacrifice to deity there might be at least a<br>
+            mistaken and terrible beauty; in the rites of the moneychangers, where greed, laziness, and envy were<br>
+            assumed to move all men's acts, even the terrible became banal.”<br>
+           ― Ursula K. Le Guin, The Dispossessed
+        </div>
+        <div class="button">
+          <a href="customers.html" class="button">START NOW</a>
+        </div>
+        <footer>
+          <div class="end">
+            <p>Developed by Samruddhi Kadam for GRIPMAY'21.</p>
+          </div>
+        </footer>
+
+        <script>
+          var preloader = document.getElementById("loading");
+          function loader(){
+            preloader.style.display = 'none';
+          }
+        </script>
+         <script src="assets/js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+        <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+    
+       
+    
+        <!-- aos data  -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+            duration: 700,
+          });
+        </script>
+
+    </body>
+</html>

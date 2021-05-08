@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+        <link rel="stylesheet" href="styles1.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+       
+
+        <title>BANKING WORLD</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">BANKING WORLD</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="main.html">HOME</a></li>
+                <li><a href="customers.html">ALL CUSTOMERS</a></li>
+                
+              </ul>
+            </div>
+          </nav>
+
+          <h4 >Net Bank Balance: Rs<span id="myAccountBalance">5000</span></h4>
+
+          <button class="btn btn-info" data-toggle="modal" data-target="#sendMoney">Send Money</button>
+          <a class="btn btn-info" href="" data-toggle="modal" data-target="#transactionHistory">See All Transactions</a>
+        
+          <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <form action="">
+                          <div class="input-group mb-3">
+                              <input type="text" id="enterName" class="form-control" placeholder="Recipient's username"
+                                  aria-label="Recipient's username" aria-describedby="basic-addon2">
+                              <div class="input-group-append">
+                                  <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+                              </div>
+                          </div>
+                          <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text">$</span>
+                              </div>
+                              <input type="text" id="enterAmount" class="form-control" placeholder=" Enter Amount"
+                                  aria-label="Amount (to the nearest dollar)">
+                              <div class="input-group-append">
+                                  <span class="input-group-text">.00</span>
+                              </div>
+                          </div>
+  
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal">Send
+                          Money</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal fade" id="transactionHistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Transaction History</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <ol id="transaction-history-body">
+  
+                      </ol>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+          <div class="customers">
+            <div class="table-responsive">
+        
+            <table  class="table table-hover table-bordered">
+                <tr>
+                    <th>CUSTOMER ID</th>
+                    <th>CUSTOMERS NAME</th>
+                    <th>EMAIL ID</th>
+                    <th>BANK BALANCE in Rs.</th>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>DAMON SALVATORE</td>
+                    <td>damon01@gmail.com</td>
+                    <td id="damonBankBalance">999</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>STEFAN SALVATORE</td>
+                    <td>stefan02@gmail.com</td>
+                    <td id="stefanBankBalance">1350</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>ELENA GILBERT</td>
+                    <td>elena03@gmail.com</td>
+                    <td id="elenaBankBalance">2000</td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>CAROLINE FORBES</td>
+                    <td>caroline04@gmail.com</td>
+                    <td id="carolineBankBalance">900</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>BONNIE BENNETT</td>
+                    <td>bonnie05@gmail.com</td>
+                    <td id="bonnieBankBalance">500</td>
+                </tr>
+                <tr>
+                    <td>006</td>
+                    <td>KLAUS MIKAELSON</td>
+                    <td>klaus06@gmail.com</td>
+                    <td id="klausBankBalance">666</td>
+                </tr>
+                <tr>
+                    <td>007</td>
+                    <td>JEREMY GILBERT</td>
+                    <td>jeremy07@gmail.com</td>
+                    <td id="jeremyBankBalance">550</td>
+                </tr>
+                <tr>
+                    <td>008</td>
+                    <td>TYLER LOCKWOOD</td>
+                    <td>tyler08@gmail.com</td>
+                    <td id="tylerBankBalance">700</td>
+                </tr>
+                <tr>
+                    <td>009</td>
+                    <td>KATHERINE PIERCE</td>
+                    <td>katherine09@gmail.com</td>
+                    <td id="katherineBankBalance">500</td>
+                </tr>
+                <tr>
+                    <td>010</td>
+                    <td>KAI PARKER</td>
+                    <td>kai10@gmail.com</td>
+                    <td id="kaiBankBalance">902</td>
+                </tr>
+               
+
+                
+            </table>
+        </div>
+        <br>
+
+        <div class="button">
+            <a href="main.html" class="button">Click here to back to HOMEPAGE</a>
+        </div>
+        <br> 
+        <br>
+        <footer>
+            <div class="end">
+              <p>Developed by Samruddhi Kadam for GRIPMAY'21.</p>
+            </div>
+        </footer>
+        <script src="assets/js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+        <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+
+
+       
+      
+    </body>
+</html>
